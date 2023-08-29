@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Unit Coversion  Meter</title>
+    <script type = "application/javascript">
+        function temp(){
+            var cel = document.getElementById("c").value;
+            far = (cel * 9/5 ) + 32;
+            document.getElementById("f").value = far; 
+        }
+        function weight(){
+            var kilo = document.getElementById("kg").value;
+            var pou = kilo * 2.2;
+            document.getElementById("lbs").value = pou;
+        }
+        function distance (){
+            var km = document.getElementById("km").value;
+            var mil = km * 0.62137;
+            document.getElementById("m").value = mil;
+        }
+    </script>
+
+</head>
+<body>
+    
+    <section id = "home">
+        <header> Unit Coversions </header>
+        <nav>
+            <a href = "#temperature"> <button>Temperature</button> </a>
+            <a href = "#weight"> <button>Weight</button> </a>
+            <a href = "#distance"> <button>Distance</button> </a>
+        </nav>
+    </section>
+
+    
+
+    <div id = "all-coversion-sections">
+        
+        <section id = "temperature">
+            <figure>
+                <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" width="200px"/>
+                <figcaption>celsius to farenheit conversion </figcaption>
+            
+            </figure>
+
+            <div id  = "temp">
+                <!-- <figure>
+                    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" width="200px" height="200px"/>
+                <figcaption>celsius to farenheit conversion</figcaption>
+                </figure> -->
+        
+                <article>
+                    <fieldset>
+                        <legend>Temperature</legend>
+                        <label for = "Temperature"> Celsius </label><br/>
+                        <input type = "number" id = "c"><br/>
+                        <button id= "temperature" onclick = "temp()">Convert</button><br/>
+                        <input type = "number" id = "f"><br/>
+                        <label for = "Temperature">Farenheit</label>
+                    </fieldset>
+                </article>
+                <aside>
+                    To covert celsius to farenheit yourself, use this formula replacing 'c' with your temperature in celsius: (c x 9/5) + 32 
+                </aside>
+            </div>        
+        
+        </section>
+
+        <section id = "weight">
+            <div id = "wgt">
+                <figure>
+                    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png" width="200px"/>
+                    <figcaption>Kilogram to pound converter</figcaption>
+                </figure>
+                <article>
+                    <fieldset>
+                        <legend>Weight</legend>
+                        <label for = "Weight">Kilograms</label><br/>
+                        <input type = "number" id = "kg"><br/>
+                        <button for = "Weight" onclick = "weight()">Convert</button><br/>
+                        <input type = "number" id = "lbs"><br/>
+                        <label for = "Weight">Pounds</label><br/>
+                    </fieldset>
+                </article>
+                <aside>
+                    To convert kilograms to pounds yourself, use this formula replacing the `kg` with your weight in kilograms: kg x 2.205
+                </aside>
+            </div>
+        </section>
+
+        <section id="distance">
+            <!-- Distance conversion section -->
+            <div id="dst">
+                <figure>
+                    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png" width="200px"/>
+                    <figcaption>Kilometer to Mile Conversion</figcaption>
+                </figure>
+                <article>
+                    <!-- This contains the specific elements for distance conversion -->
+                    <fieldset>
+                        <legend>Distance</legend>
+                        <!-- Label for Distance input -->
+                        <label for="Distance">Kilometers</label> <br/>
+                        <input type="number" id="km"> <br/>
+                        <!-- The conversion button -->
+                        <button id="distance" onclick = "distance()"> Convert </button> <br/>
+                        <!-- Label for Distance output -->
+                        <input type="number" id="m"> <br/>
+                        <label for="Distance">Miles</label>
+                    </fieldset>
+                </article>
+                <aside>
+                    To convert kilometers to miles yourself, use this formula replacing the `km` with your distance in kilometers: km &divide; 1.609
+                </aside>
+            </div>
+       </section>
+
+    </div>
+
+    <div id = "go-home">
+        <a href = "#home">
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg">
+        </a>
+    </div>
+
+    <footer>
+        Learn more about HTML as a part of the IBM Fullstack Cloud Developer Certification
+    </footer>
+    
+</body>
+</html>
